@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FC Barcelona Facts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #3a3a3a;
+        }
+
+        .fact {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #fafafa;
+        }
+
+        .fact h2 {
+            margin: 0;
+            font-size: 1.2em;
+            color: #0073e6;
+        }
+
+        .fact p {
+            margin: 5px 0 0;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>FC Barcelona Facts</h1>
+        <div id="facts-container"></div>
+    </div>
+    <script>
+        const facts = [
+            {
+                "fact": "Founded in 1899",
+                "description": "FC Barcelona was established on November 29, 1899, by a group of Swiss, Catalan, German, and English footballers led by Joan Gamper."
+            },
+            {
+                "fact": "Camp Nou",
+                "description": "The club's home stadium, Camp Nou, is one of the largest stadiums in the world, with a seating capacity of over 99,000. It opened in 1957."
+            },
+            {
+                "fact": "Més que un club",
+                "description": "The club's motto, 'Més que un club' (More than a club), reflects its significance in Catalan culture and identity, representing not just a football team but also a symbol of Catalan pride."
+            },
+            {
+                "fact": "La Masia",
+                "description": "FC Barcelona is renowned for its youth academy, La Masia, which has produced many world-class players, including Lionel Messi, Xavi Hernandez, and Andrés Iniesta."
+            },
+            {
+                "fact": "Historic Rivalry",
+                "description": "The club has a fierce rivalry with Real Madrid, known as 'El Clásico.' Matches between the two teams are among the most-watched sporting events globally."
+            },
+            {
+                "fact": "European Success",
+                "description": "Barcelona has won the UEFA Champions League multiple times, with their most recent victory in 2015. They have also won the UEFA Cup Winners' Cup and the UEFA Super Cup."
+            },
+            {
+                "fact": "Domestic Dominance",
+                "description": "The club has won numerous La Liga titles, making it one of the most successful teams in Spanish football history."
+            },
+            {
+                "fact": "Global Fanbase",
+                "description": "FC Barcelona boasts one of the largest and most passionate fanbases in the world, with millions of supporters across the globe."
+            },
+            {
+                "fact": "Financial Power",
+                "description": "Barcelona is one of the richest football clubs in the world, often ranking among the top in terms of revenue and brand value."
+            },
+            {
+                "fact": "Social Initiatives",
+                "description": "The club is involved in various social initiatives through the FC Barcelona Foundation, focusing on education, health, and social inclusion for children and youth."
+            }
+        ];
+
+        function displayFacts() {
+            const factsContainer = document.getElementById('facts-container');
+            facts.forEach(fact => {
+                const factDiv = document.createElement('div');
+                factDiv.className = 'fact';
+                factDiv.innerHTML = `<h2>${fact.fact}</h2><p>${fact.description}</p>`;
+                factsContainer.appendChild(factDiv);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', displayFacts);
+    </script>
+</body>
+</html>
